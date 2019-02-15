@@ -11,12 +11,12 @@
 		}
 
         public function login($nom,$pass){
-            $sql="SELECT * FROM user WHERE nombreUsuario='".$nom."' && Pass='".$pass."';";
+            $sql="SELECT * FROM user WHERE nombreUsuario='".$nom."' && Pass='".md5($pass)."';";
 
            // $res=$this->query($sql);
             $this->query($sql);
             $this->execute();
-            $total=$this->rowCount();
+            $total=$this->rowCount($sql);
 
             if($total>=1)
             {
@@ -24,8 +24,9 @@
 
             }else {
 
-                echo "<script type='text/javascript'>alert('No existe el user');</script>";
+                echo "<script type='text/javascript'>alert('No existe ".$total." el user');</script>";
             }
 
         }
+
 	}

@@ -22,10 +22,11 @@ class Panel extends Controller
 
 
     }
-    function home(){
+    function panel(){
 
         $this->view->__construct($this->dataView,$this->dataTable);
         $this->view->show();
 
     }
+    
 }

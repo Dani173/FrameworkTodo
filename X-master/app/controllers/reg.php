@@ -8,7 +8,6 @@
 
 namespace X\App\Controllers;
 use X\Sys\Controller;
-
 class reg extends Controller
 {
     public function __construct($params){
@@ -37,7 +36,7 @@ class reg extends Controller
         $_SESSION['pass']=htmlspecialchars($_POST['pass1']);
         $_SESSION['pass2']=htmlspecialchars($_POST['pass2']);
 
-        $this->model->reg2($_SESSION['user'],$_SESSION['pass'],$_POST['pass2']);
+        $this->model->reg2($_SESSION['nom'],$_SESSION['pass'],$_POST['pass2']);
 
     }
 }

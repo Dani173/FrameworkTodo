@@ -17,9 +17,6 @@ class mPanel extends Model
         parent::__construct();
 
     }
+   
 
-    /*public function login($nom,$pass){
-
-
-    }*/
 }

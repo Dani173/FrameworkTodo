@@ -19,6 +19,7 @@ class mDelete extends Model
     }
     function taskdelete($nomt)
     {
+        echo $nomt;
 
         if (isset($_POST) &&
             !empty($nomt)
@@ -26,7 +27,7 @@ class mDelete extends Model
 
 
 
-            $sql = "DELETE  FROM task WHERE idtask='.$nomt.'";
+            $sql = "DELETE  FROM task WHERE idtask='".$nomt."';";
             $this->query($sql);
             $this->execute();
 

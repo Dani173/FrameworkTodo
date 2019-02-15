@@ -4,7 +4,6 @@ namespace X\App\Controllers;
 
    use X\Sys\Controller;
 
-
    class Users extends Controller{
    		
 
@@ -28,5 +27,6 @@ namespace X\App\Controllers;
            $this->model->login($_SESSION['user'],$_SESSION['pass']);
 
        }
+
 
    }

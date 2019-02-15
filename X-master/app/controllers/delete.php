@@ -10,7 +10,7 @@ namespace X\App\Controllers;
 
 
 use X\Sys\Controller;
-
+use X\Sys\Session;
 class Delete extends Controller
 {
     function __construct($params = null, $dataView = null)
